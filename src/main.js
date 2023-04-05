@@ -1,0 +1,20 @@
+import "https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js";
+import './js/burger.js';
+import './js/script.js';
+import './js/anchor_link.js';
+import './js/animation.js';
+import './scss/index.scss';
+
+import './scss/reset.scss';
+import './scss/var.scss';
+import './scss/mixins.scss';
+import './scss/base.scss';
+import './scss/uikit.scss';
+import './scss/iconsfont.scss';
+import './scss/body.scss';
+import './scss/header.scss';
+import './scss/home.scss';
+import './scss/about.scss';
+import './scss/portfolio.scss';
+import './scss/skills.scss';
+import './scss/footer.scss';

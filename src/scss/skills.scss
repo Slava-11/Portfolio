@@ -1,0 +1,92 @@
+.skills{
+  background-color: var(--bgColor);
+
+  &-container{
+    padding: {
+      top: 70px;
+      bottom: 30px;
+    }
+
+    @include for-tablet{
+      padding: {
+        top: 100px;
+        bottom: 90px;
+      }
+    }
+
+    @include for-desktop-HD{
+      padding-bottom: 140px;
+    }
+  }
+
+  &__title{
+    &-text{
+      text-align: center;
+
+      &-word{
+        color: var(--mainColor);
+      }
+    }
+  }
+
+  &__content{
+    margin-top: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 20px;
+
+    @include for-tablet{
+      margin-top: 40px;
+      flex-direction: row;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    @include for-desktop{
+      justify-content: center;
+    }
+
+    @include for-desktop-HD{
+      margin-top: 70px;
+    }
+  }
+
+  &__card{
+    max-width: 370px;
+    background-color: var(--second-bgColor);
+    padding: {
+      top: 20px;
+      bottom: 30px;
+    }
+
+    border-radius: 20px;
+
+    @include for-tablet{
+      max-width: none;
+      width: 300px;
+    }
+
+    @include for-desktop{
+      margin: {
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &-img{
+      display: block;
+      width: 60px;
+      height: 60px;
+      margin: {
+        left: auto;
+        right: auto;
+      }
+    }
+
+    &-title{
+      text-align: center;
+      font-size: 20px;
+      margin-top: 40px;
+    }
+  }
+}

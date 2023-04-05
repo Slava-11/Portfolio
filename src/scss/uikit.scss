@@ -1,0 +1,63 @@
+.app-title-h1{
+  font-size: 30px;
+  color: var(--white);
+  font-weight: 700;
+
+  @include for-tablet{
+    font-size: 56px;
+    font-weight: 600;
+  }
+}
+
+.app-title-h2 {
+  font-size: 28px;
+  color: var(--white);
+  font-weight: 700;
+
+  @include for-tablet{
+    font-size: 54px;
+    font-weight: 600;
+  }
+}
+
+.app-title-h3 {
+  font-size: 20px;
+  color: var(--white);
+  font-weight: 600;
+
+  @include for-tablet{
+    font-size: 32px;
+  }
+}
+
+.app-title-p {
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--white);
+
+  @include for-tablet{
+    font-size: 16px;
+  }
+}
+
+.app-button {
+  display: block;
+  max-width: 180px;
+  padding: {
+    inset: 12px 28px 12px 28px;
+  }
+
+  border-radius: 40px;
+  background-color: var(--mainColor);
+  box-shadow: 0 0 10px var(--mainColor);
+  text-align: center;
+  font-size: 16px;
+  color: #1f242d;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: .5s ease;
+
+  &:hover{
+    box-shadow: 0 0 0 var(--mainColor);
+  }
+}

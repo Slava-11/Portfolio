@@ -1,0 +1,143 @@
+.home{
+  background-color: var(--bgColor);
+
+  &-container{
+    padding: {
+      top: 95px;
+      bottom: 40px;
+    }
+
+    @include for-tablet{
+      padding: {
+        top: 105px;
+      }
+    }
+
+    @include for-desktop{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: {
+        top: 100px;
+        bottom: 160px;
+      }
+
+    }
+
+    @include for-desktop-HD{
+      padding: {
+        top: 110px;
+        bottom: 180px;
+      }
+    }
+  }
+
+  &__content{
+    @include for-tablet{
+      max-width: 600px;
+    }
+
+    &-subtitle{
+      &-words{
+        color: var(--mainColor);
+      }
+    }
+
+    &-title{
+      margin: {
+        top: 7px;
+        bottom: 7px;
+      }
+
+      @include for-tablet{
+        padding: {
+          top: 10px;
+          bottom: 8px;
+        }
+      }
+    }
+
+    &-text{
+      margin-top: 25px;
+
+      &-word{
+        display: block;
+        color: var(--mainColor);
+        font-size: 18px;
+        margin-top: 10px;
+      }
+
+      @include for-tablet{
+        margin-top: 30px;
+      }
+    }
+
+    &-social{
+      display: flex;
+
+      &-network{
+        width: 30px;
+        height: 30px;
+        border: 2px solid var(--mainColor);
+        margin-right: 15px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--mainColor);
+        font-size: 15px;
+        transition: .5s ease;
+        margin-top: 25px;
+
+        &:hover{
+          color: #1f242d;
+          background-color: var(--mainColor);
+          box-shadow: 0 0 20px var(--mainColor);
+        }
+
+        @include for-tablet{
+          width: 40px;
+          height: 40px;
+          font-size: 20px;
+          margin-top: 30px;
+        }
+      }
+    }
+
+    &-button{
+      margin-top: 25px;
+
+      @include for-tablet{
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__img{
+    max-width: 450px;
+    margin: {
+      top: 30px;
+      left: auto;
+      right: auto;
+    }
+
+    overflow: hidden;
+    border-radius: 20px;
+
+    @include for-desktop{
+      max-width: 360px;
+      margin: {
+        left: 0;
+        right: 0;
+      }
+    }
+
+    @include for-desktop-HD{
+      max-width: 450px;
+    }
+
+    &-photo{
+      max-width: 100%;
+    }
+  }
+}

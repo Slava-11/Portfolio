@@ -1,0 +1,39 @@
+
+.footer{
+  background-color: var(--bgColor);
+
+  &-container{
+    padding: {
+      top: 10px;
+      bottom: 10px;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include for-desktop {
+      justify-content: right;
+    }
+  }
+
+  &__button{
+    &-pin{
+      width: 40px;
+      height: 40px;
+      background-color: var(--mainColor);
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--second-bgColor);
+      transition: .5s ease;
+
+      &:hover{
+        color: #1f242d;
+        background-color: var(--mainColor);
+        box-shadow: 0 0 20px var(--mainColor);
+      }
+    }
+  }
+}
