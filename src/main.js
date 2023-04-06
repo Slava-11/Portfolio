@@ -2,7 +2,6 @@ import "https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js";
 import './js/burger.js';
 import './js/script.js';
 import './js/anchor_link.js';
-import './js/animation.js';
 import './scss/index.scss';
 
 import './scss/reset.scss';
