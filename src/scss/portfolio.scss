@@ -30,7 +30,7 @@
 
   &__content{
     margin-top: 40px;
-
+    
     @include for-tablet{
       display: flex;
       flex-wrap: wrap;
@@ -51,7 +51,9 @@
     overflow: hidden;
     border-radius: 20px;
     margin: {
-      inset: 20px auto 20px auto;
+      left: auto;
+      right: auto;
+      bottom: 30px;
     }
 
     &:hover &-text{

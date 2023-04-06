@@ -109,7 +109,10 @@
 
     &-button{
       margin-top: 25px;
-
+      padding: {
+        top: 10px;
+        bottom: 10px;
+      }
       @include for-tablet{
         margin-top: 30px;
       }
