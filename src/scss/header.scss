@@ -37,7 +37,7 @@
       cursor: auto;
       @include for-desktop{
         transform: translate(0px, 30px);
-        opacity: 1;
+        opacity: 0;
       }
       &.active{
         @include for-desktop{
@@ -56,7 +56,7 @@
       }
       @include for-desktop{
         transform: translate(0px, -30px);
-        opacity: 1;
+        opacity: 0;
       }
       &.active{
         @include for-desktop{
