@@ -26,6 +26,7 @@
   }
 
   &__content{
+    overflow: hidden;
     @include for-tablet{
       max-width: 600px;
     }

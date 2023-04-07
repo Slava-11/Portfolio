@@ -161,14 +161,14 @@
         margin-top: 30px;
       }
       @include for-desktop{
-        transform: translate(100px, 0px);
+        transform: translate(0px, 50px);
         opacity: 0;
       }
       &.active{
         @include for-desktop{
           transform: translate(0px, 0px);
           opacity: 1;
-          transition: 2s;
+          transition: transform 2s, opacity 2s;
         }
       }
     }

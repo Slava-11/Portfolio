@@ -35,6 +35,17 @@
       font-size: 25px;
       color: var(--white);
       cursor: auto;
+      @include for-desktop{
+        transform: translate(0px, 30px);
+        opacity: 1;
+      }
+      &.active{
+        @include for-desktop{
+          transform: translate(0px, 0px);
+          opacity: 1;
+          transition: 2s;
+        }
+      }
     }
 
     &-navbar{
@@ -43,13 +54,24 @@
       @include for-tablet{
         display: block;
       }
+      @include for-desktop{
+        transform: translate(0px, -30px);
+        opacity: 1;
+      }
+      &.active{
+        @include for-desktop{
+          transform: translate(0px, 0px);
+          opacity: 1;
+          transition: 2s;
+        }
+      }
 
       &-item{
         font-size: 18px;
         color: var(--white);
         font-weight: 500;
         margin-left: 20px;
-        transition: .3s ease;
+        transition: color .3s ease;
 
         &:hover{
           transition: .3s ease;
