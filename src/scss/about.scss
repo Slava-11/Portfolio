@@ -38,6 +38,17 @@
       &-word{
         color: var(--mainColor);
       }
+      @include for-desktop{
+        transform: translate(0px, -60px);
+        opacity: 1;
+      }
+      &.active{
+        @include for-desktop{
+          transform: translate(0px, 0px);
+          opacity: 1;
+          transition: 2s;
+        }
+      }
     }
 
     &-subtitle{
@@ -45,6 +56,17 @@
 
       @include for-tablet{
         margin-top: 10px;
+      }
+      @include for-desktop{
+        transform: translate(90px, 0px);
+        opacity: 0;
+      }
+      &.active{
+        @include for-desktop{
+          transform: translate(0px, 0px);
+          opacity: 1;
+          transition: 2s;
+        }
       }
     }
 
@@ -60,17 +82,19 @@
       @include for-tablet{
         margin-top: 30px;
       }
-    }
-
-    &-button{
-      max-width: 160px;
-      margin-top: 25px;
-      color: var(--second-bgColor);
-
-      @include for-tablet{
-        margin-top: 30px;
+      @include for-desktop{
+        transform: translate(90px, 0px);
+        opacity: 0;
+      }
+      &.active{
+        @include for-desktop{
+          transform: translate(0px, 0px);
+          opacity: 1;
+          transition: 2s;
+        }
       }
     }
+
   }
 
   &__img{
@@ -89,6 +113,15 @@
       margin: {
         left: 0;
         right: 0;
+      }
+      transform: translate(-90px, 0px);
+      opacity: 0;
+    }
+    &.active{
+      @include for-desktop{
+        transform: translate(0px, 0px);
+        opacity: 1;
+        transition: 2s;
       }
     }
 

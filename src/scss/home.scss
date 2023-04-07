@@ -44,6 +44,17 @@
       &-words{
         color: var(--mainColor);
       }
+      @include for-desktop{
+        transform: translate(-150px, 0px);
+        opacity: 1;
+      }
+      &.active{
+        @include for-desktop{
+          transform: translate(0px, 0px);
+          opacity: 1;
+          transition: 2s;
+        }
+      }
     }
 
     &-title{
@@ -51,11 +62,23 @@
         top: 7px;
         bottom: 7px;
       }
+      -webkit-text-stroke: 2px var(--mainColor);
 
       @include for-tablet{
         padding: {
           top: 10px;
           bottom: 8px;
+        }
+      }
+      @include for-desktop{
+        transform: translate(150px, 0px);
+        opacity: 0;
+      }
+      &.active{
+        @include for-desktop{
+          transform: translate(0px, 0px);
+          opacity: 1;
+          transition: 2s;
         }
       }
     }
@@ -73,11 +96,32 @@
       @include for-tablet{
         margin-top: 30px;
       }
+      @include for-desktop{
+        transform: translate(0px, -60px);
+        opacity: 0;
+      }
+      &.active{
+        @include for-desktop{
+          transform: translate(0px, 0px);
+          opacity: 1;
+          transition: 2s;
+        }
+      }
     }
 
     &-social{
       display: flex;
-
+      @include for-desktop{
+        transform: translate(-100px, 0px);
+        opacity: 1;
+      }
+      &.active{
+        @include for-desktop{
+          transform: translate(0px, 0px);
+          opacity: 1;
+          transition: 2s;
+        }
+      }
       &-network{
         width: 30px;
         height: 30px;
@@ -116,6 +160,17 @@
       @include for-tablet{
         margin-top: 30px;
       }
+      @include for-desktop{
+        transform: translate(100px, 0px);
+        opacity: 0;
+      }
+      &.active{
+        @include for-desktop{
+          transform: translate(0px, 0px);
+          opacity: 1;
+          transition: 2s;
+        }
+      }
     }
   }
 
@@ -129,12 +184,23 @@
 
     overflow: hidden;
     border-radius: 20px;
+    box-shadow: 0 0 20px var(--mainColor);
+    animation-name: photo;
+    animation-duration: 7s;
+    animation-iteration-count:  infinite;
 
     @include for-desktop{
       max-width: 360px;
       margin: {
         left: 0;
         right: 0;
+      }
+      scale: 0;
+    }
+    &.active{
+      @include for-desktop{
+        scale: 1;
+        transition: 2s;
       }
     }
 
@@ -145,5 +211,16 @@
     &-photo{
       max-width: 100%;
     }
+  }
+}
+@keyframes photo {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-24px);
+  }
+  100%{
+    transform: translateY(0);
   }
 }

@@ -1,3 +1,25 @@
 body{
   font-family: Poppins, sans-serif;
+  &.active{
+    overflow: hidden;
+  }
+}
+
+
+::-webkit-scrollbar{
+  width: 15px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: gray;
+  box-shadow:  0 0 2px rgba( 0, 0, 0,.2 ) inset;  
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--mainColor);
+  border-radius: 8px;
+  border: 3px solid var(--bgColor);
+
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: rgb(4, 217, 232);
 }

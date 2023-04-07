@@ -26,6 +26,17 @@
         color: var(--mainColor);
       }
     }
+    @include for-desktop{
+      transform: translate(0px, -80px);
+      opacity: 0;
+    }
+    &.active{
+      @include for-desktop{
+        transform: translate(0px, 0px);
+        opacity: 1;
+        transition: 2s;
+      }
+    }
   }
 
   &__content{
@@ -41,6 +52,15 @@
     @include for-desktop{
       gap: 40px;
       margin-top: 40px;
+      transform: translate(0px, 80px);
+      opacity: 0;
+    }
+    &.active{
+      @include for-desktop{
+        transform: translate(0px, 0px);
+        opacity: 1;
+        transition: 2s;
+      }
     }
   }
 

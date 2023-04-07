@@ -29,6 +29,17 @@
         color: var(--mainColor);
       }
     }
+    @include for-desktop{
+      transform: translate(0px, 100px);
+      opacity: 0;
+    }
+    &.active{
+      @include for-desktop{
+        transform: translate(0px, 0px);
+        opacity: 1;
+        transition: 2s;
+      }
+    }
   }
 
   &__content{
@@ -48,6 +59,16 @@
 
     @include for-desktop{
       justify-content: center;
+      transform: translate(0px, -100px);
+      opacity: 0;
+      transition: 2s;
+    }
+    &.active{
+      @include for-desktop{
+        transform: translate(0px, 0px);
+        opacity: 1;
+        transition: 2s;
+      }
     }
 
     @include for-desktop-HD{
